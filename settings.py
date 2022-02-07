@@ -1,0 +1,1 @@
+REGEX_REPLACE_PATTERN = "{{%([^(\r\n|\r|\n)]*)%}}"
