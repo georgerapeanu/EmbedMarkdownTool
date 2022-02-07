@@ -113,7 +113,7 @@ The only prerequisite is that you must have python installed.
 ## Usage
 
 To run the app, you simply have to run ```python3 EmbedMarkdownTool.py main_file_path destination_file_path```, 
-where `main_file_path` is the path to the main file(the one from which the replacements will start) and `destination_file_path` is the file path to which the result will be stored. The script will, by default, look for `{{%path%}}` strings, and will replace `{{%path%}}` with the content of the file that is at `path`. That file could contain such `{{%path%}}` too, as long as it doesn't cause any circular imports
+where `main_file_path` is the path to the main file(the one from which the replacements will start) and `destination_file_path` is the file path to which the result will be stored. The script will, by default, look for `{{%path%}}` strings, and will replace `{{%path%}}` with the content of the file that is at `path`. That file could contain such `{{%path%}}` too, as long as it doesn't cause any circular imports. You can look in the tests folder for some sort of examples: files which contain `valid` in their name are processed by tests and you can look in the `expected` files to see what you would get.
 
 
 <!-- ROADMAP -->
