@@ -18,6 +18,7 @@ class DependenciesValidator:
         self.__in_degree[file_node.file_path] = 0
         for dependency in file_node.dependencies:
             if dependency in self.__processed_files:
+                self.__in_degree[dependency] += 1
                 continue
             try:
                 dependency_node = FileNode(dependency, self.__regex_matcher)
@@ -76,6 +77,8 @@ class DependenciesValidator:
         try:
             main_file_node = FileNode(self.__main_file_path, self.__regex_matcher)
             self.__run_file_search(main_file_node)
+            if len(self.__errors) > 0:
+                raise DependenciesValidatorException("\n".join(self.__errors))
             self.__run_topological_sort()
             if len(self.__errors) > 0:
                 raise DependenciesValidatorException("\n".join(self.__errors))
