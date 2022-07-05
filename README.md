@@ -34,9 +34,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/georgerapeanu/EmbedMarkdownTool">
-    <img src="logo.jpg" alt="Project link" width="80" height="80">
-  </a>
 
   <h3 align="center">Embed Markdown Tool</h3>
 
